@@ -2,45 +2,37 @@ import os
 from pathlib import Path
 import logging
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
+logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
 
-project_name = "hate_speech"
+PROJECT_NAME = "hate_speech"
 
 list_of_files = [
-    f"{project_name}/components/__init__.py",
-    f"{project_name}/components/data_ingestion.py",
-    f"{project_name}/components/data_transformation.py",
-    f"{project_name}/components/model_train.py",
-    f"{project_name}/components/model_evaluation.py",
-    f"{project_name}/components/model_deploy.py",
-
-    f"{project_name}/configuration/__init__.py",
-    f"{project_name}/configuration/gcp_sync.py",
-
-    f"{project_name}/constant/__init__.py",
-
-    f"{project_name}/entity/__init__.py",
-    f"{project_name}/entity/config_entity.py",
-    f"{project_name}/entity/artifact_entity.py",
-
-    f"{project_name}/exception/__init__.py",
-
-    f"{project_name}/logger/__init__.py",
-
-    f"{project_name}/pipeline/__init__.py",
-    f"{project_name}/pipeline/train_pipeline.py",
-    f"{project_name}/pipeline/prediction_pipeline.py",
-
-    f"{project_name}/ml/__init__.py",
-    f"{project_name}/ml/model.py",
-
+    f"{PROJECT_NAME}/components/__init__.py",
+    f"{PROJECT_NAME}/components/data_ingestion.py",
+    f"{PROJECT_NAME}/components/data_transformation.py",
+    f"{PROJECT_NAME}/components/model_train.py",
+    f"{PROJECT_NAME}/components/model_evaluation.py",
+    f"{PROJECT_NAME}/components/model_deploy.py",
+    f"{PROJECT_NAME}/configuration/__init__.py",
+    f"{PROJECT_NAME}/configuration/gcp_sync.py",
+    f"{PROJECT_NAME}/constant/__init__.py",
+    f"{PROJECT_NAME}/entity/__init__.py",
+    f"{PROJECT_NAME}/entity/config_entity.py",
+    f"{PROJECT_NAME}/entity/artifact_entity.py",
+    f"{PROJECT_NAME}/exception/__init__.py",
+    f"{PROJECT_NAME}/logger/__init__.py",
+    f"{PROJECT_NAME}/pipeline/__init__.py",
+    f"{PROJECT_NAME}/pipeline/train_pipeline.py",
+    f"{PROJECT_NAME}/pipeline/prediction_pipeline.py",
+    f"{PROJECT_NAME}/ml/__init__.py",
+    f"{PROJECT_NAME}/ml/model.py",
     "app.py",
     "demo.py",
     "requirements.txt",
     "Dockerfile",
     "setup.py",
-    ".dockerignore"
+    ".dockerignore",
 ]
 
 
@@ -53,7 +45,7 @@ for filepath in list_of_files:
         logging.info(f"Creating directory: {file_dir} for file: {file_name}")
 
     if (not os.path.exists(file_path)) or (os.path.getsize(file_path) == 0):
-        with open(file_path, 'w') as f:
+        with open(file_path, "w") as f:
             pass
             logging.info(f"Creating empty file: {file_path}")
 
