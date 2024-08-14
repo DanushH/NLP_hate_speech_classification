@@ -1,13 +1,12 @@
-numpy
-pandas
+numpy 
+pandas 
+tensorflow
 matplotlib
 seaborn
-tensorflow
 nltk
 regex
 scikit-learn
 from-root
-google-cloud-storage
 kaggle
 fastapi
 uvicorn
